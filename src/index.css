@@ -1,3 +1,53 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    background-color: rgb(1, 1, 19);
+}
+/* Hamburger Menu */
+.hamburger {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+  }
+  
+  .hamburgertop,
+  .hamburgermiddle,
+  .hamburgerbottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: #000;
+    transform: rotate(0);
+    transition: all 0.5s;
+  }
+  
+  .hamburgermiddle {
+    transform: translateY(7px);
+  }
+  
+  .hamburgerbottom {
+    transform: translateY(14px);
+  }
+  
+  .open {
+    transform: rotate(90deg);
+    transform: translateY(0px);
+  }
+  
+  .open .hamburgertop {
+    transform: rotate(45deg) translateY(6px) translate(6px);
+  }
+  
+  .open .hamburgermiddle {
+    display: none;
+  }
+  
+  .open .hamburgerbottom {
+    transform: rotate(-45deg) translateY(6px) translate(-6px);
+  }
